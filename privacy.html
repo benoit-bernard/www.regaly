@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Politique de confidentialité — Regaly</title>
+  <meta name="description" content="Politique de confidentialité de Regaly. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles." />
+  <link rel="canonical" href="https://regaly.app/privacy.html" />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://regaly.app/privacy.html" />
+  <meta property="og:site_name" content="Regaly" />
+  <meta property="og:title" content="Politique de confidentialité — Regaly" />
+  <meta property="og:description" content="Politique de confidentialité de Regaly conforme RGPD, Google Play et Apple App Store." />
+  <meta property="og:locale" content="fr_FR" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline-variant": "#afb2b7",
+            "primary": "#4f4cd1",
+            "tertiary-container": "#c4acff",
+            "on-primary": "#fbf7ff",
+            "on-background": "#2f3337",
+            "surface-variant": "#e0e3e7",
+            "surface-container-high": "#e6e8ec",
+            "background": "#f9f9fc",
+            "secondary-container": "#ffdbd0",
+            "on-surface": "#2f3337",
+            "surface-container": "#eceef1",
+            "on-secondary-container": "#962d00",
+            "secondary": "#ad3500",
+            "primary-container": "#bcbbff",
+            "on-tertiary-container": "#4300a1",
+            "on-surface-variant": "#5c5f64",
+            "surface-container-highest": "#e0e3e7",
+            "surface": "#f9f9fc",
+            "surface-container-low": "#f3f3f6",
+            "tertiary": "#6e3bd8",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ac3149",
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f9f9fc; color: #2f3337; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-nav { background: rgba(249, 249, 252, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .hero-gradient { background: linear-gradient(135deg, #4f4cd1 0%, #6e3bd8 100%); }
+    .card-shadow { box-shadow: 0px 12px 32px rgba(47, 51, 55, 0.06); }
+    .text-gradient { background: linear-gradient(135deg, #4f4cd1 0%, #6e3bd8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ghost-border { border: 1px solid rgba(175, 178, 183, 0.15); }
+    html { scroll-behavior: smooth; }
+
+    /* Sidebar sticky on desktop */
+    .toc-sidebar { position: sticky; top: 5.5rem; max-height: calc(100vh - 7rem); overflow-y: auto; }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: #e0e3e7; border-radius: 99px; }
+
+    /* Active TOC link */
+    .toc-link { transition: all 0.2s ease; }
+    .toc-link.active { color: #4f4cd1; font-weight: 700; padding-left: 0.75rem; border-left: 3px solid #4f4cd1; }
+
+    /* Prose styles */
+    .prose-legal h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; color: #2f3337; margin-bottom: 1rem; }
+    .prose-legal h3 { font-size: 1.1rem; font-weight: 700; color: #2f3337; margin-bottom: 0.5rem; margin-top: 1.5rem; }
+    .prose-legal p { color: #5c5f64; line-height: 1.75; margin-bottom: 1rem; }
+    .prose-legal ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .prose-legal ul li { display: flex; align-items: flex-start; gap: 0.6rem; color: #5c5f64; line-height: 1.7; margin-bottom: 0.4rem; }
+    .prose-legal ul li::before { content: ""; display: block; width: 6px; height: 6px; border-radius: 50%; background: #4f4cd1; margin-top: 0.55rem; flex-shrink: 0; }
+    .prose-legal a { color: #4f4cd1; text-decoration: underline; text-underline-offset: 3px; }
+    .prose-legal strong { color: #2f3337; font-weight: 700; }
+    .section-anchor { scroll-margin-top: 6rem; }
+  </style>
+</head>
+
+<body class="bg-background text-on-background antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 glass-nav">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img alt="Regaly Logo" class="w-9 h-9 rounded-xl"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGh7sz_ndLISqBWpp9VgoY-w1QdMhnjThvS9SDnFRUDJg9tQYel35SyUqVTf3Nu2y4waDrD9NjQFtv8eQZOsfn2EjrkyHniafmqyHasqqH2WdepL0PCF8oCLeRmp4RTW9ejueWV7zp6N5HDj5i_xa-LkpsY65-ld5ASqnfJ_UX6kIz6hplD0ij-QX6DnNBBasRYsrOCW2-CfswiEcHaTV2j_4F7WSuaSA_rMC_Yc78XUX23fiqtKtBdddTZP0huH-dTtfBRz4bKlM" />
+        <span class="text-xl font-bold tracking-tighter text-gradient">Regaly</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="data-deletion.html" class="hidden sm:inline-flex items-center gap-2 text-on-surface-variant hover:text-primary text-sm font-medium transition-colors">
+          <span class="material-symbols-outlined text-base">delete_forever</span>
+          Suppression des données
+        </a>
+        <a href="index.html" class="hero-gradient text-on-primary px-5 py-2.5 rounded-3xl font-bold text-sm hover:opacity-90 transition-all">
+          Retour à l'accueil
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-12 px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container/40 text-primary text-xs font-bold tracking-[0.15em] uppercase mb-6">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
+        Conforme RGPD · Au-delà de la loi · Google Play · App Store
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tighter mb-4 text-on-background">
+        Politique de <span class="text-gradient">confidentialité</span>
+      </h1>
+      <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
+        Nous respectons le RGPD — et nous allons plus loin. Notre objectif est éthique : aucune donnée vendue, aucun tiers publicitaire, des logs gérés en interne, et des données hébergées en Europe sous droit européen.
+      </p>
+      <!-- Meta badges -->
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-2xl card-shadow text-sm">
+          <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">update</span>
+          <span class="text-on-surface-variant">Dernière mise à jour :</span>
+          <strong class="text-on-surface">1er juillet 2025</strong>
+        </div>
+        <div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-2xl card-shadow text-sm">
+          <span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">language</span>
+          <span class="text-on-surface-variant">Version :</span>
+          <strong class="text-on-surface">1.0</strong>
+        </div>
+        <div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-2xl card-shadow text-sm">
+          <span class="material-symbols-outlined text-emerald-600 text-base" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          <span class="text-on-surface-variant">Données hébergées en</span>
+          <strong class="text-on-surface">Union Européenne</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT + SIDEBAR -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 pb-24">
+    <div class="flex gap-12 items-start">
+
+      <!-- TABLE OF CONTENTS (desktop) -->
+      <aside class="hidden xl:block w-72 shrink-0 toc-sidebar">
+        <div class="bg-surface-container-lowest rounded-3xl p-6 card-shadow ghost-border">
+          <p class="text-xs font-bold uppercase tracking-[0.15em] text-on-surface-variant mb-4">Table des matières</p>
+          <nav id="toc" class="flex flex-col gap-1">
+            <a href="#responsable" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">1. Responsable du traitement</a>
+            <a href="#collecte" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">2. Données collectées</a>
+            <a href="#finalites" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">3. Finalités et base légale</a>
+            <a href="#contacts" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">4. Données des contacts</a>
+            <a href="#conservation" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">5. Durée de conservation</a>
+            <a href="#partage" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">6. Partage des données</a>
+            <a href="#droits" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">7. Vos droits</a>
+            <a href="#securite" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">8. Sécurité</a>
+            <a href="#mineurs" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">9. Mineurs</a>
+            <a href="#modifications" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">10. Modifications</a>
+            <a href="#contact" class="toc-link text-sm text-on-surface-variant hover:text-primary py-1.5 pl-3 rounded-xl hover:bg-primary-container/20 transition-all">11. Contact</a>
+          </nav>
+          <!-- Quick action -->
+          <div class="mt-6 pt-5" style="border-top: 1px solid rgba(175,178,183,0.15)">
+            <a href="data-deletion.html" class="flex items-center gap-3 p-3 rounded-2xl bg-error/5 hover:bg-error/10 transition-colors group">
+              <span class="material-symbols-outlined text-error text-xl" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+              <div>
+                <p class="text-sm font-bold text-error">Supprimer mes données</p>
+                <p class="text-xs text-on-surface-variant">Voir la procédure complète</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="flex-1 min-w-0">
+        <div class="space-y-8 prose-legal">
+
+          <!-- 1. RESPONSABLE -->
+          <section id="responsable" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl hero-gradient flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">business</span>
+              </div>
+              <h2>1. Responsable du traitement</h2>
+            </div>
+            <p>Le responsable du traitement de vos données personnelles est :</p>
+            <div class="bg-surface-container-low rounded-2xl p-6 mt-4 space-y-2 text-sm">
+              <p><strong>Responsable :</strong> Benoit BERNARD</p>
+              <p><strong>Adresse :</strong> 15 bis bd des rossignols, 13012 Marseille, France</p>
+              <p><strong>E-mail :</strong> <a href="mailto:privacy@regaly.app">privacy@regaly.app</a></p>
+            </div>
+            <p class="mt-4">En utilisant l'application Regaly, vous acceptez les pratiques décrites dans la présente politique de confidentialité, conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés.</p>
+          </section>
+
+          <!-- 2. DONNÉES COLLECTÉES -->
+          <section id="collecte" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">database</span>
+              </div>
+              <h2>2. Données collectées</h2>
+            </div>
+            <p>Regaly collecte uniquement les données nécessaires au fonctionnement de l'application. Voici les catégories de données que nous traitons :</p>
+
+            <!-- Phone number highlight -->
+            <div class="bg-secondary-container/30 rounded-2xl p-5 my-5 flex gap-4 items-start">
+              <span class="material-symbols-outlined text-secondary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+              <div>
+                <h3 class="!mt-0 !text-base">Numéro de téléphone</h3>
+                <p class="!mb-0 text-sm">Votre numéro de téléphone est la donnée centrale de votre compte Regaly. Il sert d'identifiant unique, de moyen de vérification par SMS et de canal de communication sécurisé.</p>
+              </div>
+            </div>
+
+            <h3>2.1 Données d'identification et de compte</h3>
+            <ul>
+              <li>Numéro de téléphone mobile (obligatoire — identifiant du compte)</li>
+              <li>Prénom et nom d'affichage (obligatoire)</li>
+              <li>Photo de profil (optionnelle)</li>
+              <li>Adresse e-mail (optionnelle, pour les notifications)</li>
+              <li>Date de naissance (optionnelle, pour les rappels d'anniversaire)</li>
+            </ul>
+
+            <h3>2.2 Données de liste et de cadeaux</h3>
+            <ul>
+              <li>Noms, descriptions et prix des articles de vos listes de cadeaux</li>
+              <li>Photos des articles (importées ou capturées via appareil photo)</li>
+              <li>Liens vers des produits en ligne</li>
+              <li>Commentaires et annotations sur les listes de vos contacts</li>
+              <li>Indications de réservation ou d'achat de cadeaux</li>
+            </ul>
+
+            <h3>2.3 Données techniques</h3>
+            <ul>
+              <li>Identifiant unique de l'appareil (Device ID)</li>
+              <li>Système d'exploitation et version (iOS / Android)</li>
+              <li>Version de l'application Regaly</li>
+              <li>Données de journalisation (logs) pour le diagnostic d'erreurs</li>
+              <li>Jeton de notification push (pour les alertes)</li>
+            </ul>
+
+            <h3>2.4 Données de géolocalisation</h3>
+            <div class="bg-secondary-container/30 rounded-2xl p-5 my-3 flex gap-4 items-start">
+              <span class="material-symbols-outlined text-secondary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">location_on</span>
+              <div>
+                <h3 class="!mt-0 !text-base">Géolocalisation lors du scan code-barres</h3>
+                <p class="!mb-0 text-sm">Lorsque vous ajoutez un article à votre liste en scannant son code-barres, Regaly peut enregistrer votre localisation géographique au moment du scan. Cette information permet à vos contacts de savoir <strong>où vous avez vu ce cadeau</strong> (ex. : « Vu chez Fnac Paris Rivoli »), enrichissant ainsi l'expérience sociale de l'application.</p>
+              </div>
+            </div>
+            <ul>
+              <li>La géolocalisation lors du scan est <strong>optionnelle</strong> et soumise à votre consentement explicite.</li>
+              <li>Les coordonnées sont converties en nom de lieu approximatif (ville ou enseigne) — jamais en adresse précise.</li>
+              <li>Votre <strong>profil public (« créateur »)</strong> n'affiche ni votre localisation ni votre numéro de téléphone à vos contacts.</li>
+              <li>Vous pouvez désactiver cette fonctionnalité à tout moment dans <strong>Mon compte → Paramètres → Localisation</strong>.</li>
+            </ul>
+
+            <h3>2.5 Données liées à la publicité</h3>
+            <div class="bg-tertiary-container/20 rounded-2xl p-5 my-3 flex gap-4 items-start">
+              <span class="material-symbols-outlined text-tertiary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">ad_units</span>
+              <div>
+                <h3 class="!mt-0 !text-base">Régie publicitaire interne</h3>
+                <p class="!mb-0 text-sm">Regaly intègre sa propre régie publicitaire, sans lien avec aucune plateforme extérieure. Les publicités sont diffusées sur la base de <strong>données contextuelles uniquement</strong> (ex. : catégorie de la liste consultée). <strong>Aucun cookie publicitaire tiers, aucune donnée personnelle identifiable ni aucun profil comportemental</strong> n'est constitué ou partagé avec un tiers.</p>
+              </div>
+            </div>
+
+            <h3>2.6 Données d'utilisation</h3>
+            <ul>
+              <li>Interactions avec les fonctionnalités de l'application (événements anonymisés)</li>
+              <li>Fréquence et durée d'utilisation (agrégées, non individualisées)</li>
+            </ul>
+
+            <div class="bg-primary-container/20 rounded-2xl p-4 mt-4 text-sm flex gap-3">
+              <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">info</span>
+              <p class="!mb-0 !text-sm">Nous ne collectons <strong>jamais</strong> vos données bancaires, votre localisation GPS en arrière-plan, ni le contenu de vos SMS ou e-mails personnels.</p>
+            </div>
+          </section>
+
+          <!-- 3. FINALITÉS -->
+          <section id="finalites" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-tertiary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+              </div>
+              <h2>3. Finalités et base légale du traitement</h2>
+            </div>
+            <p>Chaque traitement de données repose sur une base légale définie par le RGPD :</p>
+
+            <div class="overflow-x-auto mt-4">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-surface-container-low rounded-xl">
+                    <th class="text-left p-3 font-bold text-on-surface rounded-tl-2xl">Finalité</th>
+                    <th class="text-left p-3 font-bold text-on-surface">Données concernées</th>
+                    <th class="text-left p-3 font-bold text-on-surface rounded-tr-2xl">Base légale (RGPD)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container-high/50">
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Création et gestion du compte</td>
+                    <td class="p-3 text-on-surface-variant">Numéro de téléphone, prénom</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-primary-container/40 text-primary text-xs font-bold">Contrat</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Vérification par SMS</td>
+                    <td class="p-3 text-on-surface-variant">Numéro de téléphone</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-primary-container/40 text-primary text-xs font-bold">Contrat</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Fonctionnalités sociales et partage de listes</td>
+                    <td class="p-3 text-on-surface-variant">Profil, listes, commentaires</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-primary-container/40 text-primary text-xs font-bold">Contrat</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Rappels d'anniversaires et notifications</td>
+                    <td class="p-3 text-on-surface-variant">Dates, jeton push</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">Consentement</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Géolocalisation lors du scan code-barres</td>
+                    <td class="p-3 text-on-surface-variant">Coordonnées converties en lieu approximatif</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">Consentement</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Comparaison de prix et alertes</td>
+                    <td class="p-3 text-on-surface-variant">Articles de la wishlist</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-primary-container/40 text-primary text-xs font-bold">Contrat</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Publicité contextuelle (régie interne)</td>
+                    <td class="p-3 text-on-surface-variant">Données contextuelles uniquement (catégorie)</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold">Intérêt légitime</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Commissions d'affiliation marchands</td>
+                    <td class="p-3 text-on-surface-variant">Référence anonyme de transaction</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold">Intérêt légitime</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Cagnottes collectives (commission 1%)</td>
+                    <td class="p-3 text-on-surface-variant">Données de paiement (traitement prestataire)</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-primary-container/40 text-primary text-xs font-bold">Contrat</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Amélioration de l'application</td>
+                    <td class="p-3 text-on-surface-variant">Données d'usage anonymisées</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold">Intérêt légitime</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Prévention de la fraude et sécurité</td>
+                    <td class="p-3 text-on-surface-variant">Logs, Device ID</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold">Intérêt légitime</span></td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50 transition-colors">
+                    <td class="p-3 text-on-surface">Obligations légales et comptables</td>
+                    <td class="p-3 text-on-surface-variant">Données de transaction</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-bold">Obligation légale</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 4. DONNÉES DES CONTACTS -->
+          <section id="contacts" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">contacts</span>
+              </div>
+              <h2>4. Accès à vos contacts téléphoniques</h2>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200/60 rounded-2xl p-5 mb-6 flex gap-3">
+              <span class="material-symbols-outlined text-amber-600 shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">warning</span>
+              <p class="!mb-0 text-sm text-amber-900"><strong>Information importante :</strong> Pour vous permettre de retrouver facilement vos proches sur Regaly, l'application peut accéder à votre répertoire téléphonique. Cet accès est strictement optionnel et soumis à votre consentement explicite.</p>
+            </div>
+
+            <h3>Pourquoi accédons-nous à votre répertoire ?</h3>
+            <p>Regaly est une application sociale. Son utilité repose sur la capacité à partager des listes de cadeaux avec vos proches. Pour cela, nous comparons les numéros de téléphone de votre répertoire avec les comptes Regaly existants, afin de vous suggérer des connexions.</p>
+
+            <h3>Ce que nous faisons avec ces données</h3>
+            <ul>
+              <li>Nous comparons les numéros de votre répertoire avec les comptes Regaly existants pour vous suggérer des connexions avec vos proches.</li>
+              <li>En cas de correspondance, seul le profil public de votre contact (prénom, photo de profil) vous est présenté.</li>
+              <li>Nous ne contactons <strong>jamais</strong> vos contacts — aucun SMS, aucune notification ne leur est envoyé sans une action explicite de votre part.</li>
+              <li>Nous ne revendons <strong>jamais</strong> les données de vos contacts à des tiers.</li>
+            </ul>
+
+            <h3>Comment révoquer cet accès ?</h3>
+            <p>Vous pouvez retirer l'accès à votre répertoire à tout moment depuis les paramètres de votre téléphone :</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <div class="bg-surface-container-low rounded-2xl p-4 flex items-center gap-3">
+                <span class="material-symbols-outlined text-on-surface text-2xl" style="font-variation-settings: 'FILL' 1;">phone_iphone</span>
+                <div>
+                  <p class="font-bold text-sm !mb-1">iOS (iPhone)</p>
+                  <p class="text-xs text-on-surface-variant !mb-0">Réglages → Regaly → Contacts → Désactiver</p>
+                </div>
+              </div>
+              <div class="bg-surface-container-low rounded-2xl p-4 flex items-center gap-3">
+                <span class="material-symbols-outlined text-on-surface text-2xl" style="font-variation-settings: 'FILL' 1;">android</span>
+                <div>
+                  <p class="font-bold text-sm !mb-1">Android</p>
+                  <p class="text-xs text-on-surface-variant !mb-0">Paramètres → Applications → Regaly → Autorisations → Contacts → Refuser</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. CONSERVATION -->
+          <section id="conservation" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">hourglass_empty</span>
+              </div>
+              <h2>5. Durée de conservation des données</h2>
+            </div>
+
+            <!-- Timeline visual -->
+            <div class="my-6 space-y-3">
+              <div class="flex items-stretch gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="w-10 h-10 rounded-full hero-gradient flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-on-primary text-lg" style="font-variation-settings: 'FILL' 1;">person</span>
+                  </div>
+                  <div class="w-0.5 flex-1 bg-surface-container-high mt-2"></div>
+                </div>
+                <div class="pb-6">
+                  <p class="font-bold text-on-surface">Compte actif</p>
+                  <p class="text-sm text-on-surface-variant">Vos données sont conservées pendant toute la durée d'utilisation de votre compte. Vous pouvez les modifier ou les supprimer à tout moment.</p>
+                </div>
+              </div>
+              <div class="flex items-stretch gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">delete</span>
+                  </div>
+                  <div class="w-0.5 flex-1 bg-surface-container-high mt-2"></div>
+                </div>
+                <div class="pb-6">
+                  <p class="font-bold text-on-surface">Demande de suppression du compte</p>
+                  <p class="text-sm text-on-surface-variant">À partir de ce moment, votre compte est désactivé. Vous ne pouvez plus vous connecter. Vos données ne sont plus accessibles par d'autres utilisateurs.</p>
+                </div>
+              </div>
+              <div class="flex items-stretch gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-on-surface-variant text-lg">timer</span>
+                  </div>
+                  <div class="w-0.5 flex-1 bg-surface-container-high mt-2"></div>
+                </div>
+                <div class="pb-6">
+                  <p class="font-bold text-on-surface">Période de grâce — 90 jours</p>
+                  <p class="text-sm text-on-surface-variant">Pendant 90 jours, vous pouvez vous reconnecter pour annuler la suppression et récupérer votre compte. Si vous vous reconnectez, la suppression est automatiquement annulée.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+                </div>
+                <div>
+                  <p class="font-bold text-error">Suppression définitive — J+90</p>
+                  <p class="text-sm text-on-surface-variant">90 jours après la demande de suppression sans reconnexion, toutes vos données personnelles sont supprimées de manière irréversible de nos serveurs et sauvegardes.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3>Données conservées après suppression</h3>
+            <p>Certaines données peuvent être conservées au-delà de la période de 90 jours pour des raisons légales ou techniques :</p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm mt-3">
+                <thead>
+                  <tr class="bg-surface-container-low">
+                    <th class="text-left p-3 font-bold rounded-tl-xl">Type de données</th>
+                    <th class="text-left p-3 font-bold">Durée de conservation</th>
+                    <th class="text-left p-3 font-bold rounded-tr-xl">Raison</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container/50">
+                  <tr class="hover:bg-surface-container-low/40">
+                    <td class="p-3 text-on-surface">Données de facturation et transactions</td>
+                    <td class="p-3 text-on-surface-variant">10 ans</td>
+                    <td class="p-3 text-on-surface-variant">Obligation légale (Code de commerce)</td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/40">
+                    <td class="p-3 text-on-surface">Logs de sécurité et de connexion</td>
+                    <td class="p-3 text-on-surface-variant">12 mois</td>
+                    <td class="p-3 text-on-surface-variant">Obligation légale (LCEN)</td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/40">
+                    <td class="p-3 text-on-surface">Données anonymisées d'usage</td>
+                    <td class="p-3 text-on-surface-variant">Indéfiniment</td>
+                    <td class="p-3 text-on-surface-variant">Statistiques (ne permettent pas de réidentification)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 6. PARTAGE -->
+          <section id="partage" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-tertiary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">share</span>
+              </div>
+              <h2>6. Partage des données avec des tiers</h2>
+            </div>
+            <p><strong>Regaly ne vend jamais vos données personnelles.</strong> Nous pouvons partager certaines données avec des prestataires techniques dans le strict cadre de la fourniture du service :</p>
+
+            <div class="space-y-4 mt-5">
+              <div class="flex gap-4 p-5 rounded-2xl bg-tertiary-container/20">
+                <span class="material-symbols-outlined text-tertiary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">ad_units</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">Régie publicitaire interne</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Regaly gère sa propre régie publicitaire en interne, sans recours à Google Ads, Meta Ads ni aucune plateforme tierce. <strong>Aucun cookie publicitaire, aucune donnée personnelle identifiable ni aucune donnée comportementale</strong> n'est transmise à un acteur extérieur. La publicité repose uniquement sur le contexte de navigation dans l'application (catégorie de cadeau consultée).</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 rounded-2xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">Logs techniques (gestion interne)</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Les journaux techniques (erreurs, connexions, diagnostics) sont collectés et traités exclusivement en interne, sur nos propres serveurs européens. <strong>Aucun outil d'analyse tiers (Google Analytics, Crashlytics, Sentry, etc.) n'est utilisé</strong> pour le traitement de ces données.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 rounded-2xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">storefront</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">Marchands partenaires (commissions d'affiliation)</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Lorsque vous accédez à un produit via Regaly, une référence anonyme de la transaction peut être transmise au marchand afin de valider la commission d'affiliation. <strong>Aucune donnée personnelle identifiable n'est partagée</strong> dans ce cadre. Le classement et les recommandations ne sont jamais influencés par le taux de commission d'un marchand.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 rounded-2xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">sms</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">Prestataire SMS (vérification)</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Votre numéro de téléphone est transmis à notre prestataire d'envoi de SMS pour les codes de vérification et de confirmation de suppression de compte. Ce prestataire est soumis à des obligations de confidentialité strictes et est certifié RGPD.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 rounded-2xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">compare_arrows</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">APIs de comparaison de prix</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Les noms et références de produits de vos listes sont envoyés à des APIs de comparaison de prix. Aucune donnée personnelle n'est transmise dans ce cadre.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 rounded-2xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">notifications</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">Services de notification push</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Apple Push Notification Service (APNs) et Firebase Cloud Messaging (FCM) sont utilisés pour l'envoi de notifications. Seul votre jeton de notification est partagé, jamais vos données personnelles.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 rounded-2xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">cloud</span>
+                <div>
+                  <h3 class="!mt-0 !text-sm font-bold">Hébergement et infrastructure</h3>
+                  <p class="!mb-0 text-sm text-on-surface-variant">Nos données sont hébergées sur des serveurs situés en Union Européenne, chez des prestataires signataires des clauses contractuelles types de la Commission européenne.</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-6">En dehors de ces cas, vos données ne sont communiquées à des tiers que sur réquisition judiciaire ou injonction d'une autorité compétente.</p>
+          </section>
+
+          <!-- 7. DROITS -->
+          <section id="droits" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl hero-gradient flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">gavel</span>
+              </div>
+              <h2>7. Vos droits sur vos données</h2>
+            </div>
+            <p>Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles. Vous pouvez exercer la majorité de ces droits directement depuis l'application :</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
+              <div class="p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                  <h3 class="!mt-0 font-bold text-sm">Droit d'accès</h3>
+                </div>
+                <p class="!mb-0 text-sm text-on-surface-variant">Obtenir une copie de toutes vos données personnelles traitées par Regaly.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">edit</span>
+                  <h3 class="!mt-0 font-bold text-sm">Droit de rectification</h3>
+                </div>
+                <p class="!mb-0 text-sm text-on-surface-variant">Corriger les données inexactes ou incomplètes vous concernant.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-error text-xl" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+                  <h3 class="!mt-0 font-bold text-sm">Droit à l'effacement</h3>
+                </div>
+                <p class="!mb-0 text-sm text-on-surface-variant">Demander la suppression de votre compte et de vos données personnelles (voir <a href="data-deletion.html">procédure de suppression</a>).</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">download</span>
+                  <h3 class="!mt-0 font-bold text-sm">Droit à la portabilité</h3>
+                </div>
+                <p class="!mb-0 text-sm text-on-surface-variant">Recevoir vos données dans un format structuré et lisible par machine (JSON).</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">block</span>
+                  <h3 class="!mt-0 font-bold text-sm">Droit d'opposition</h3>
+                </div>
+                <p class="!mb-0 text-sm text-on-surface-variant">Vous opposer au traitement de vos données fondé sur l'intérêt légitime.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">pause_circle</span>
+                  <h3 class="!mt-0 font-bold text-sm">Droit à la limitation</h3>
+                </div>
+                <p class="!mb-0 text-sm text-on-surface-variant">Demander la suspension temporaire du traitement de vos données.</p>
+              </div>
+            </div>
+
+            <div class="bg-primary-container/20 rounded-2xl p-5 mt-6 flex gap-3">
+              <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">info</span>
+              <div>
+                <p class="font-bold text-sm text-on-surface !mb-1">Comment exercer vos droits ?</p>
+                <p class="text-sm !mb-0 text-on-surface-variant">Depuis l'application : <strong>Mon compte → Confidentialité → Gérer mes données.</strong><br/>Par e-mail : <a href="mailto:privacy@regaly.app">privacy@regaly.app</a> — Nous répondrons dans un délai maximum de <strong>30 jours</strong>.<br/>En cas de non-réponse, vous pouvez saisir la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8. SÉCURITÉ -->
+          <section id="securite" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-emerald-700 text-2xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+              </div>
+              <h2>8. Sécurité des données</h2>
+            </div>
+            <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, perte ou destruction :</p>
+            <ul>
+              <li>Chiffrement des données en transit (TLS 1.3) et au repos (AES-256)</li>
+              <li>Vérification de l'identité par SMS à chaque connexion</li>
+              <li>Accès aux données de production restreint et audité</li>
+              <li>Journaux techniques (logs) gérés exclusivement en interne — aucun outil d'analyse tiers</li>
+              <li>Procédure de notification des violations de données conforme au RGPD (72h)</li>
+              <li>Sauvegardes chiffrées géo-redondantes au sein de l'Union Européenne</li>
+            </ul>
+          </section>
+
+          <!-- 9. MINEURS -->
+          <section id="mineurs" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">child_care</span>
+              </div>
+              <h2>9. Protection des mineurs</h2>
+            </div>
+            <p>Regaly est destiné aux personnes âgées de <strong>13 ans et plus</strong>. Nous ne collectons pas sciemment les données de mineurs de moins de 13 ans. Si vous êtes parent ou tuteur et que vous pensez que votre enfant nous a fourni des données sans votre consentement, contactez-nous à <a href="mailto:privacy@regaly.app">privacy@regaly.app</a> afin que nous puissions supprimer ces données dans les meilleurs délais.</p>
+            <p>Pour les utilisateurs âgés de 13 à 15 ans (selon la législation nationale applicable), le consentement d'un titulaire de l'autorité parentale peut être requis conformément à l'article 8 du RGPD.</p>
+          </section>
+
+          <!-- 10. MODIFICATIONS -->
+          <section id="modifications" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">history</span>
+              </div>
+              <h2>10. Modifications de la politique</h2>
+            </div>
+            <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. En cas de modification substantielle, vous serez informé par une notification dans l'application et, si nécessaire, par SMS, au moins <strong>30 jours avant l'entrée en vigueur</strong> des nouvelles dispositions.</p>
+            <p>La version en vigueur est toujours accessible depuis les paramètres de l'application (<strong>Mon compte → Confidentialité</strong>) et sur notre site web.</p>
+            <div class="bg-surface-container-low rounded-2xl p-5 mt-4">
+              <p class="font-bold text-sm !mb-2">Historique des versions</p>
+              <div class="flex justify-between items-center text-sm py-2">
+                <span class="text-on-surface">Version 1.0 — Juillet 2025</span>
+                <span class="px-3 py-1 rounded-full bg-primary-container/40 text-primary text-xs font-bold">En vigueur</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 11. CONTACT -->
+          <section id="contact" class="section-anchor bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-2xl hero-gradient flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+              </div>
+              <h2>11. Contact</h2>
+            </div>
+            <p>Pour toute question relative à cette politique de confidentialité ou pour exercer vos droits, contactez le responsable du traitement :</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5">
+              <a href="mailto:privacy@regaly.app" class="flex flex-col items-center gap-3 p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors text-center">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+                <div>
+                  <p class="font-bold text-sm !mb-0.5">E-mail</p>
+                  <p class="text-xs text-on-surface-variant !mb-0">privacy@regaly.app</p>
+                </div>
+              </a>
+              <a href="data-deletion.html" class="flex flex-col items-center gap-3 p-5 rounded-2xl bg-error/5 hover:bg-error/10 transition-colors text-center">
+                <span class="material-symbols-outlined text-error text-3xl" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+                <div>
+                  <p class="font-bold text-sm !mb-0.5">Suppression</p>
+                  <p class="text-xs text-on-surface-variant !mb-0">Supprimer mes données</p>
+                </div>
+              </a>
+              <a href="https://www.cnil.fr" target="_blank" rel="noopener" class="flex flex-col items-center gap-3 p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors text-center">
+                <span class="material-symbols-outlined text-on-surface-variant text-3xl" style="font-variation-settings: 'FILL' 1;">balance</span>
+                <div>
+                  <p class="font-bold text-sm !mb-0.5">CNIL</p>
+                  <p class="text-xs text-on-surface-variant !mb-0">Autorité de contrôle</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-container-low py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-lg font-bold text-gradient">Regaly</span>
+          <span class="text-on-surface-variant text-sm">— Politique de confidentialité</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors">Accueil</a>
+          <a href="privacy.html" class="text-primary font-semibold">Confidentialité</a>
+          <a href="data-deletion.html" class="text-on-surface-variant hover:text-primary transition-colors">Suppression des données</a>
+          <a href="mailto:privacy@regaly.app" class="text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 text-center text-xs text-on-surface-variant" style="border-top: 1px solid rgba(175,178,183,0.15)">
+        © 2025 Regaly — Benoit BERNARD. Tous droits réservés. · Hébergé en Union Européenne · Conforme RGPD
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Active TOC link on scroll
+    const sections = document.querySelectorAll('.section-anchor');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-80px 0px -60% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>

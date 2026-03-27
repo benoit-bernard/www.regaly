@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Suppression des données — Regaly</title>
+  <meta name="description" content="Comment supprimer votre compte Regaly et vos données personnelles. Procédure complète conforme Google Play Store et Apple App Store." />
+  <link rel="canonical" href="https://regaly.app/data-deletion.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://regaly.app/data-deletion.html" />
+  <meta property="og:site_name" content="Regaly" />
+  <meta property="og:title" content="Suppression de compte et des données — Regaly" />
+  <meta property="og:description" content="Procédure complète pour supprimer votre compte Regaly et vos données personnelles. Conforme Google Play et Apple App Store." />
+  <meta property="og:locale" content="fr_FR" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline-variant": "#afb2b7",
+            "primary": "#4f4cd1",
+            "tertiary-container": "#c4acff",
+            "on-primary": "#fbf7ff",
+            "on-background": "#2f3337",
+            "background": "#f9f9fc",
+            "secondary-container": "#ffdbd0",
+            "on-surface": "#2f3337",
+            "surface-container": "#eceef1",
+            "on-secondary-container": "#962d00",
+            "secondary": "#ad3500",
+            "primary-container": "#bcbbff",
+            "on-tertiary-container": "#4300a1",
+            "on-surface-variant": "#5c5f64",
+            "surface-container-highest": "#e0e3e7",
+            "surface": "#f9f9fc",
+            "surface-container-low": "#f3f3f6",
+            "surface-container-high": "#e6e8ec",
+            "tertiary": "#6e3bd8",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ac3149",
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f9f9fc; color: #2f3337; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-nav { background: rgba(249, 249, 252, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .hero-gradient { background: linear-gradient(135deg, #4f4cd1 0%, #6e3bd8 100%); }
+    .card-shadow { box-shadow: 0px 12px 32px rgba(47, 51, 55, 0.06); }
+    .text-gradient { background: linear-gradient(135deg, #4f4cd1 0%, #6e3bd8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ghost-border { border: 1px solid rgba(175, 178, 183, 0.15); }
+    .error-gradient { background: linear-gradient(135deg, #ac3149 0%, #c0392b 100%); }
+    html { scroll-behavior: smooth; }
+
+    /* Stepper */
+    .step-line { width: 2px; flex: 1; background: #eceef1; margin-left: 23px; margin-top: 2px; margin-bottom: 2px; min-height: 2rem; }
+    .step-line.done { background: linear-gradient(180deg, #4f4cd1, #6e3bd8); }
+
+    /* Animations */
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+    .pulse-ring::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: #ac3149;
+      animation: pulse-ring 1.8s ease-out infinite;
+    }
+
+    /* Timeline bar */
+    .timeline-track { background: linear-gradient(90deg, #4f4cd1 0%, #6e3bd8 40%, #eceef1 40%); }
+    .timeline-fill { transition: width 0.4s ease; }
+
+    /* Form styles */
+    .form-input {
+      width: 100%;
+      background: #f3f3f6;
+      border: 1px solid rgba(175,178,183,0.25);
+      border-radius: 0.75rem;
+      padding: 0.85rem 1rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #2f3337;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-input:focus {
+      border-color: #4f4cd1;
+      box-shadow: 0 0 0 4px rgba(79,76,209,0.08);
+    }
+    .form-input::placeholder { color: #afb2b7; }
+    textarea.form-input { resize: vertical; min-height: 120px; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Screen mockup steps */
+    .screen-step { transition: all 0.3s ease; }
+  </style>
+</head>
+
+<body class="bg-background text-on-background antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 glass-nav">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img alt="Regaly Logo" class="w-9 h-9 rounded-xl"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGh7sz_ndLISqBWpp9VgoY-w1QdMhnjThvS9SDnFRUDJg9tQYel35SyUqVTf3Nu2y4waDrD9NjQFtv8eQZOsfn2EjrkyHniafmqyHasqqH2WdepL0PCF8oCLeRmp4RTW9ejueWV7zp6N5HDj5i_xa-LkpsY65-ld5ASqnfJ_UX6kIz6hplD0ij-QX6DnNBBasRYsrOCW2-CfswiEcHaTV2j_4F7WSuaSA_rMC_Yc78XUX23fiqtKtBdddTZP0huH-dTtfBRz4bKlM" />
+        <span class="text-xl font-bold tracking-tighter text-gradient">Regaly</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="privacy.html" class="hidden sm:inline-flex items-center gap-2 text-on-surface-variant hover:text-primary text-sm font-medium transition-colors">
+          <span class="material-symbols-outlined text-base">shield</span>
+          Confidentialité
+        </a>
+        <a href="index.html" class="hero-gradient text-on-primary px-5 py-2.5 rounded-3xl font-bold text-sm hover:opacity-90 transition-all">
+          Retour à l'accueil
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-12 px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="relative inline-flex items-center justify-center w-20 h-20 mx-auto mb-6 pulse-ring">
+        <div class="w-20 h-20 rounded-full bg-error/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-error text-4xl" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+        </div>
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tighter mb-4">
+        Suppression de <span class="text-gradient">votre compte</span>
+      </h1>
+      <p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto">
+        Cette page explique comment supprimer votre compte Regaly et vos données personnelles, conformément aux exigences du Google Play Store, de l'Apple App Store et du RGPD.
+      </p>
+
+      <!-- Quick jump buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <a href="#procedure" class="flex items-center gap-2 bg-surface-container-lowest px-5 py-2.5 rounded-3xl card-shadow text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">phone_iphone</span>
+          Procédure in-app
+        </a>
+        <a href="#timeline" class="flex items-center gap-2 bg-surface-container-lowest px-5 py-2.5 rounded-3xl card-shadow text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">schedule</span>
+          Délais
+        </a>
+        <a href="#what-is-deleted" class="flex items-center gap-2 bg-surface-container-lowest px-5 py-2.5 rounded-3xl card-shadow text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">table_chart</span>
+          Données concernées
+        </a>
+        <a href="#alternative" class="flex items-center gap-2 bg-error/10 px-5 py-2.5 rounded-3xl card-shadow text-sm font-semibold text-error hover:bg-error/20 transition-colors">
+          <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">mail</span>
+          Sans accès à l'app
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 pb-24 space-y-10">
+
+    <!-- ─── IMPORTANT NOTICE ─── -->
+    <div class="reveal bg-amber-50 rounded-3xl p-6 flex gap-4" style="border: 1px solid rgba(217,119,6,0.2)">
+      <span class="material-symbols-outlined text-amber-600 text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">warning</span>
+      <div>
+        <p class="font-bold text-amber-900 mb-1">La suppression est irréversible après 90 jours</p>
+        <p class="text-sm text-amber-800 leading-relaxed">
+          Une fois votre compte supprimé, vous disposez d'une période de grâce de <strong>90 jours</strong> pour vous reconnecter et annuler la suppression. Passé ce délai, toutes vos données seront définitivement effacées et il vous sera impossible de les récupérer.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── PROCEDURE IN-APP ─── -->
+    <section id="procedure" class="scroll-mt-24">
+      <div class="reveal bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 rounded-2xl hero-gradient flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">phone_iphone</span>
+          </div>
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight">Procédure de suppression in-app</h2>
+            <p class="text-sm text-on-surface-variant mt-0.5">Disponible sur iOS et Android · Durée estimée : 2 minutes</p>
+          </div>
+        </div>
+
+        <!-- Stepper -->
+        <div class="flex gap-6">
+          <!-- Steps column -->
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full hero-gradient flex items-center justify-center text-on-primary font-bold text-lg shrink-0">1</div>
+            <div class="step-line done"></div>
+            <div class="w-12 h-12 rounded-full hero-gradient flex items-center justify-center text-on-primary font-bold text-lg shrink-0">2</div>
+            <div class="step-line done"></div>
+            <div class="w-12 h-12 rounded-full hero-gradient flex items-center justify-center text-on-primary font-bold text-lg shrink-0">3</div>
+            <div class="step-line done"></div>
+            <div class="w-12 h-12 rounded-full hero-gradient flex items-center justify-center text-on-primary font-bold text-lg shrink-0">4</div>
+            <div class="step-line"></div>
+            <div class="w-12 h-12 rounded-full bg-error/10 flex items-center justify-center text-error font-bold text-lg shrink-0" style="border: 2px solid rgba(172,49,73,0.3)">5</div>
+          </div>
+
+          <!-- Content column -->
+          <div class="flex-1 min-w-0 pb-2">
+            <!-- Step 1 -->
+            <div class="pb-8">
+              <div class="flex items-start gap-4">
+                <div class="flex-1">
+                  <h3 class="font-bold text-lg mb-1">Ouvrir l'application Regaly</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">Lancez l'application et connectez-vous si ce n'est pas déjà fait. Vous devez être connecté à votre compte pour initier la suppression.</p>
+                </div>
+                <div class="bg-surface-container-low rounded-2xl p-3 shrink-0 hidden sm:flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">open_in_new</span>
+                  <span class="text-xs font-semibold">Ouvrir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="pb-8">
+              <h3 class="font-bold text-lg mb-1">Aller dans "Mon compte"</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-3">Depuis l'écran principal, appuyez sur l'icône de profil en bas à droite ou accédez au menu hamburger. Sélectionnez <strong>"Mon compte"</strong>.</p>
+              <!-- Breadcrumb path -->
+              <div class="flex flex-wrap items-center gap-2 text-xs">
+                <span class="bg-primary-container/40 text-primary px-3 py-1.5 rounded-full font-bold">Accueil</span>
+                <span class="material-symbols-outlined text-on-surface-variant text-sm">chevron_right</span>
+                <span class="bg-primary-container/40 text-primary px-3 py-1.5 rounded-full font-bold">Menu</span>
+                <span class="material-symbols-outlined text-on-surface-variant text-sm">chevron_right</span>
+                <span class="bg-primary px-3 py-1.5 rounded-full font-bold text-on-primary">Mon compte</span>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="pb-8">
+              <h3 class="font-bold text-lg mb-1">Supprimer le compte</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-3">Dans la section "Mon compte", faites défiler jusqu'en bas de la page. Appuyez sur le bouton <strong>"Supprimer mon compte"</strong> (en rouge).</p>
+              <!-- Button preview -->
+              <div class="inline-flex items-center gap-2 bg-error/10 text-error px-5 py-2.5 rounded-2xl text-sm font-bold" style="border: 1px solid rgba(172,49,73,0.2)">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+                Supprimer mon compte
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="pb-8">
+              <h3 class="font-bold text-lg mb-1">Confirmer par SMS</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Pour confirmer votre identité et protéger votre compte, un <strong>code de confirmation est envoyé par SMS</strong> sur votre numéro de téléphone enregistré. Saisissez ce code dans l'application.</p>
+              <!-- SMS mockup -->
+              <div class="max-w-xs bg-surface-container-low rounded-2xl p-4">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-8 h-8 rounded-full hero-gradient flex items-center justify-center">
+                    <span class="text-on-primary text-xs font-bold">R</span>
+                  </div>
+                  <span class="text-sm font-bold">Regaly</span>
+                  <span class="text-xs text-on-surface-variant ml-auto">maintenant</span>
+                </div>
+                <div class="bg-surface-container-lowest rounded-2xl p-3">
+                  <p class="text-sm text-on-surface">Votre code de suppression Regaly est : <strong class="text-error text-lg tracking-widest">847 291</strong></p>
+                  <p class="text-xs text-on-surface-variant mt-1">Ce code expire dans 10 minutes. Ne le partagez jamais.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div>
+              <h3 class="font-bold text-lg mb-1 text-error">Suppression enclenchée</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Votre compte est immédiatement désactivé. Vous avez <strong>90 jours</strong> pour vous reconnecter et annuler la suppression. Passé ce délai, toutes vos données personnelles sont effacées définitivement.</p>
+              <!-- Confirmation message mockup -->
+              <div class="mt-4 bg-error/5 rounded-2xl p-4 flex gap-3" style="border: 1px solid rgba(172,49,73,0.15)">
+                <span class="material-symbols-outlined text-error shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <div>
+                  <p class="text-sm font-bold text-error !mb-1">Compte désactivé</p>
+                  <p class="text-xs text-on-surface-variant !mb-0">Votre compte sera définitivement supprimé dans <strong>90 jours</strong>. Reconnectez-vous avant cette date pour annuler.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TIMELINE ─── -->
+    <section id="timeline" class="scroll-mt-24">
+      <div class="reveal bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 rounded-2xl bg-tertiary-container flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
+          </div>
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight">Délais et calendrier</h2>
+            <p class="text-sm text-on-surface-variant mt-0.5">Ce qui se passe après votre demande de suppression</p>
+          </div>
+        </div>
+
+        <!-- Visual timeline -->
+        <div class="relative mt-4">
+          <!-- Horizontal bar (desktop) -->
+          <div class="hidden md:block">
+            <div class="relative h-2 bg-surface-container-high rounded-full mb-10">
+              <div class="absolute h-full rounded-full" style="width: 40%; background: linear-gradient(90deg, #4f4cd1, #6e3bd8)"></div>
+              <!-- Markers -->
+              <div class="absolute -top-3 left-0 w-8 h-8 rounded-full hero-gradient flex items-center justify-center -translate-x-1/2">
+                <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">delete</span>
+              </div>
+              <div class="absolute -top-3 left-[40%] w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center -translate-x-1/2" style="border: 2px solid #eceef1">
+                <span class="material-symbols-outlined text-on-surface-variant text-sm">timer</span>
+              </div>
+              <div class="absolute -top-3 right-0 w-8 h-8 rounded-full bg-error/10 flex items-center justify-center translate-x-1/2" style="border: 2px solid rgba(172,49,73,0.3)">
+                <span class="material-symbols-outlined text-error text-sm" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+              </div>
+            </div>
+            <div class="flex justify-between text-sm px-0">
+              <div class="text-center max-w-[200px]">
+                <p class="font-bold text-on-surface">Jour 0</p>
+                <p class="text-on-surface-variant text-xs mt-1">Demande de suppression.<br/>Compte désactivé immédiatement.</p>
+              </div>
+              <div class="text-center max-w-[200px]" style="margin-left: calc(40% - 100px)">
+                <p class="font-bold text-on-surface">Reconnexion possible</p>
+                <p class="text-on-surface-variant text-xs mt-1">À tout moment entre J+0 et J+90, une reconnexion annule la suppression.</p>
+              </div>
+              <div class="text-center max-w-[200px]">
+                <p class="font-bold text-error">Jour 90</p>
+                <p class="text-on-surface-variant text-xs mt-1">Suppression définitive et irréversible de toutes les données personnelles.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertical timeline (mobile) -->
+          <div class="md:hidden space-y-0">
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full hero-gradient flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-on-primary text-lg" style="font-variation-settings: 'FILL' 1;">delete</span>
+                </div>
+                <div class="w-0.5 flex-1 bg-surface-container-high my-1" style="min-height: 3rem"></div>
+              </div>
+              <div class="pb-6">
+                <p class="font-bold text-on-surface">Jour 0 — Demande de suppression</p>
+                <p class="text-sm text-on-surface-variant">Compte désactivé immédiatement. Données inaccessibles aux autres utilisateurs.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-primary-container/60 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-primary text-lg">login</span>
+                </div>
+                <div class="w-0.5 flex-1 bg-surface-container-high my-1" style="min-height: 3rem"></div>
+              </div>
+              <div class="pb-6">
+                <p class="font-bold text-on-surface">J+0 à J+90 — Période de grâce</p>
+                <p class="text-sm text-on-surface-variant">Reconnectez-vous à tout moment pour <strong>annuler la suppression</strong> et récupérer votre compte.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center shrink-0" style="border: 2px solid rgba(172,49,73,0.25)">
+                  <span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+                </div>
+              </div>
+              <div>
+                <p class="font-bold text-error">Jour 90 — Suppression définitive</p>
+                <p class="text-sm text-on-surface-variant">Toutes les données personnelles sont irrémédiablement supprimées.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key info boxes -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
+          <div class="bg-primary-container/20 rounded-2xl p-4 text-center">
+            <p class="text-3xl font-extrabold text-gradient mb-1">0</p>
+            <p class="text-sm font-semibold text-on-surface">Délai de désactivation</p>
+            <p class="text-xs text-on-surface-variant mt-1">Immédiate après confirmation SMS</p>
+          </div>
+          <div class="bg-tertiary-container/20 rounded-2xl p-4 text-center">
+            <p class="text-3xl font-extrabold text-gradient mb-1">90</p>
+            <p class="text-sm font-semibold text-on-surface">Jours de grâce</p>
+            <p class="text-xs text-on-surface-variant mt-1">Pour annuler et récupérer le compte</p>
+          </div>
+          <div class="bg-error/5 rounded-2xl p-4 text-center" style="border: 1px solid rgba(172,49,73,0.1)">
+            <p class="text-3xl font-extrabold text-error mb-1">J+90</p>
+            <p class="text-sm font-semibold text-on-surface">Suppression définitive</p>
+            <p class="text-xs text-on-surface-variant mt-1">Irréversible, toutes données effacées</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── WHAT IS DELETED ─── -->
+    <section id="what-is-deleted" class="scroll-mt-24">
+      <div class="reveal bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">table_chart</span>
+          </div>
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight">Données concernées par la suppression</h2>
+            <p class="text-sm text-on-surface-variant mt-0.5">Ce qui est effacé et ce qui peut être conservé</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="text-left p-3 font-bold text-on-surface rounded-tl-2xl">Catégorie de données</th>
+                <th class="text-left p-3 font-bold text-on-surface">Exemples</th>
+                <th class="text-left p-3 font-bold text-on-surface">Délai</th>
+                <th class="text-left p-3 font-bold text-on-surface rounded-tr-2xl">Statut</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y" style="--tw-divide-color: rgba(175,178,183,0.12);">
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Profil utilisateur</td>
+                <td class="p-3 text-on-surface-variant">Numéro de téléphone, prénom, photo de profil</td>
+                <td class="p-3 text-on-surface-variant">J+90</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Listes de cadeaux</td>
+                <td class="p-3 text-on-surface-variant">Tous vos articles, photos, liens, descriptions</td>
+                <td class="p-3 text-on-surface-variant">J+90</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Commentaires et annotations</td>
+                <td class="p-3 text-on-surface-variant">Commentaires sur listes de contacts, idées secrètes</td>
+                <td class="p-3 text-on-surface-variant">J+90</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Connexions sociales</td>
+                <td class="p-3 text-on-surface-variant">Amis, groupes, listes partagées</td>
+                <td class="p-3 text-on-surface-variant">J+90</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Données de contacts</td>
+                <td class="p-3 text-on-surface-variant">Numéros de téléphone de votre répertoire</td>
+                <td class="p-3 text-on-surface-variant">J+90</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Données de géolocalisation</td>
+                <td class="p-3 text-on-surface-variant">Lieux de scan code-barres (ville / enseigne)</td>
+                <td class="p-3 text-on-surface-variant">J+90</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Jeton de notifications push</td>
+                <td class="p-3 text-on-surface-variant">Identifiants APNs / FCM</td>
+                <td class="p-3 text-on-surface-variant">Immédiat</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error/10 text-error text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Supprimé</span></td>
+              </tr>
+
+              <!-- Retained -->
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Logs de sécurité et de connexion</td>
+                <td class="p-3 text-on-surface-variant">Adresse IP, date/heure de connexion</td>
+                <td class="p-3 text-on-surface-variant">12 mois (loi)</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Conservé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Données de facturation</td>
+                <td class="p-3 text-on-surface-variant">Historique de paiement, montants</td>
+                <td class="p-3 text-on-surface-variant">10 ans (loi)</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Conservé</span></td>
+              </tr>
+              <tr class="hover:bg-surface-container-low/40 transition-colors">
+                <td class="p-3 font-semibold text-on-surface">Données anonymisées d'usage</td>
+                <td class="p-3 text-on-surface-variant">Statistiques agrégées (non réidentifiables)</td>
+                <td class="p-3 text-on-surface-variant">Indéfini</td>
+                <td class="p-3"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold"><span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>Anonymisé</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mt-6 text-xs">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-error"></span><span class="text-on-surface-variant">Supprimé définitivement à J+90</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-500"></span><span class="text-on-surface-variant">Conservé pour obligation légale uniquement</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-on-surface-variant/40"></span><span class="text-on-surface-variant">Anonymisé (ne permet pas de réidentification)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ALTERNATIVE REQUEST ─── -->
+    <section id="alternative" class="scroll-mt-24">
+      <div class="reveal bg-surface-container-lowest rounded-3xl p-8 lg:p-10 card-shadow">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-2xl bg-error/10 flex items-center justify-center shrink-0" style="border: 1px solid rgba(172,49,73,0.15)">
+            <span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+          </div>
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight">Vous n'avez plus accès à l'application ?</h2>
+            <p class="text-sm text-on-surface-variant mt-0.5">Demandez la suppression par e-mail ou via ce formulaire</p>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low rounded-2xl p-5 mb-8 flex gap-3">
+          <span class="material-symbols-outlined text-primary shrink-0 mt-0.5">info</span>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            Si vous ne pouvez plus accéder à votre compte (numéro de téléphone perdu, appareil cassé…), vous pouvez nous envoyer une demande de suppression par e-mail à <a href="mailto:privacy@regaly.app" class="text-primary font-semibold underline underline-offset-2">privacy@regaly.app</a> ou via le formulaire ci-dessous. Nous traiterons votre demande dans un délai de <strong>30 jours</strong> conformément au RGPD.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form id="deletion-form" class="space-y-5" onsubmit="handleFormSubmit(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-on-surface mb-2">Prénom <span class="text-error">*</span></label>
+              <input type="text" class="form-input" placeholder="Votre prénom" required />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-on-surface mb-2">Nom <span class="text-error">*</span></label>
+              <input type="text" class="form-input" placeholder="Votre nom" required />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-on-surface mb-2">Numéro de téléphone associé au compte <span class="text-error">*</span></label>
+            <input type="tel" class="form-input" placeholder="+33 6 XX XX XX XX" required />
+            <p class="text-xs text-on-surface-variant mt-1.5">Le numéro de téléphone que vous avez utilisé pour créer votre compte Regaly.</p>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-on-surface mb-2">Adresse e-mail de contact <span class="text-error">*</span></label>
+            <input type="email" class="form-input" placeholder="votre@email.com" required />
+            <p class="text-xs text-on-surface-variant mt-1.5">Pour vous confirmer la prise en compte et vous informer de la suppression.</p>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-on-surface mb-2">Motif de la demande (optionnel)</label>
+            <textarea class="form-input" placeholder="Expliquez brièvement pourquoi vous souhaitez supprimer votre compte et pourquoi vous ne pouvez pas le faire depuis l'application…"></textarea>
+          </div>
+
+          <!-- Checkboxes -->
+          <div class="space-y-3">
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <div class="relative mt-0.5">
+                <input type="checkbox" id="check-confirm" class="sr-only peer" required />
+                <div class="w-5 h-5 rounded-lg bg-surface-container-high peer-checked:bg-primary transition-colors flex items-center justify-center" style="border: 1.5px solid rgba(175,178,183,0.4)">
+                  <span class="material-symbols-outlined text-on-primary text-sm hidden peer-checked:block" style="font-size:14px">check</span>
+                </div>
+              </div>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Je comprends que la suppression de mon compte entraînera la <strong class="text-on-surface">suppression définitive</strong> de toutes mes données personnelles dans un délai de 90 jours et que cette action est <strong class="text-on-surface">irréversible</strong>. <span class="text-error">*</span></p>
+            </label>
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <div class="relative mt-0.5">
+                <input type="checkbox" id="check-rgpd" class="sr-only peer" required />
+                <div class="w-5 h-5 rounded-lg bg-surface-container-high peer-checked:bg-primary transition-colors flex items-center justify-center" style="border: 1.5px solid rgba(175,178,183,0.4)">
+                  <span class="material-symbols-outlined text-on-primary text-sm hidden peer-checked:block" style="font-size:14px">check</span>
+                </div>
+              </div>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Je confirme être le titulaire du compte associé au numéro de téléphone indiqué ci-dessus. <span class="text-error">*</span></p>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full flex items-center justify-center gap-3 bg-error text-white py-4 rounded-3xl font-bold text-base hover:opacity-90 transition-all hover:scale-[1.01]">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+            Envoyer ma demande de suppression
+          </button>
+        </form>
+
+        <!-- Success message (hidden by default) -->
+        <div id="form-success" class="hidden text-center py-8">
+          <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-emerald-600 text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          </div>
+          <h3 class="text-xl font-bold text-on-surface mb-2">Demande reçue</h3>
+          <p class="text-on-surface-variant text-sm max-w-md mx-auto">Nous avons bien reçu votre demande de suppression. Vous recevrez un e-mail de confirmation dans les prochaines minutes. Votre demande sera traitée dans un délai maximum de <strong>30 jours</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section id="faq" class="scroll-mt-24">
+      <div class="reveal">
+        <h2 class="text-2xl font-extrabold tracking-tight mb-6">Questions fréquentes</h2>
+
+        <div class="space-y-3">
+          <!-- FAQ Item -->
+          <details class="bg-surface-container-lowest rounded-2xl card-shadow group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-on-surface">Puis-je récupérer mes données avant suppression définitive ?</span>
+              <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+              Oui. Pendant la période de grâce de 90 jours, vous pouvez vous reconnecter et demander une exportation de vos données (Mon compte → Confidentialité → Exporter mes données). Vous recevrez un fichier JSON contenant l'ensemble de vos informations dans un délai de 72h.
+            </div>
+          </details>
+
+          <details class="bg-surface-container-lowest rounded-2xl card-shadow group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-on-surface">Que deviennent mes cadeaux réservés par mes amis ?</span>
+              <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+              Lorsque votre compte est supprimé, vos listes de cadeaux disparaissent. Les réservations effectuées par vos amis sur vos listes sont automatiquement annulées. Vos amis reçoivent une notification les informant que le compte associé a été supprimé.
+            </div>
+          </details>
+
+          <details class="bg-surface-container-lowest rounded-2xl card-shadow group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-on-surface">Mon numéro de téléphone sera-t-il réutilisable pour créer un nouveau compte ?</span>
+              <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+              Oui. Après la suppression définitive (J+90), votre numéro de téléphone n'est plus associé à aucun compte Regaly. Vous pouvez librement créer un nouveau compte avec ce même numéro.
+            </div>
+          </details>
+
+          <details class="bg-surface-container-lowest rounded-2xl card-shadow group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-on-surface">Puis-je annuler la suppression ?</span>
+              <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+              Oui, uniquement pendant la période de grâce de 90 jours. Reconnectez-vous simplement à l'application avec votre numéro de téléphone. Une confirmation SMS vous sera envoyée et votre compte sera immédiatement réactivé. Après J+90, la suppression est définitive et irréversible.
+            </div>
+          </details>
+
+          <details class="bg-surface-container-lowest rounded-2xl card-shadow group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-on-surface">Combien de temps prend le traitement d'une demande par formulaire ?</span>
+              <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+              Les demandes envoyées par e-mail ou via le formulaire sont traitées dans un délai maximum de 30 jours conformément au RGPD. Vous recevrez un accusé de réception par e-mail dans les 48 heures, puis une confirmation de suppression à l'issue du traitement.
+            </div>
+          </details>
+
+          <details class="bg-surface-container-lowest rounded-2xl card-shadow group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-on-surface">Que se passe-t-il si je n'utilise plus l'application pendant longtemps ?</span>
+              <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
+              Sans suppression explicite de votre part, votre compte et vos données sont conservés indéfiniment. Seule une demande active de suppression (in-app ou par formulaire) déclenche le processus de suppression. Nous ne supprimons pas automatiquement les comptes inactifs.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <div class="reveal bg-primary-container/20 rounded-3xl p-8 flex flex-col sm:flex-row items-center gap-6">
+      <div class="w-14 h-14 rounded-2xl hero-gradient flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+      </div>
+      <div class="flex-1 text-center sm:text-left">
+        <h3 class="font-bold text-lg mb-1">Besoin d'aide supplémentaire ?</h3>
+        <p class="text-sm text-on-surface-variant">Notre équipe répond à toutes vos questions sur vos données personnelles.</p>
+      </div>
+      <a href="mailto:privacy@regaly.app" class="hero-gradient text-on-primary px-7 py-3 rounded-3xl font-bold text-sm hover:opacity-90 transition-all hover:scale-105 shrink-0">
+        Nous contacter
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-container-low py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-lg font-bold text-gradient">Regaly</span>
+          <span class="text-on-surface-variant text-sm">— Suppression des données</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors">Accueil</a>
+          <a href="privacy.html" class="text-on-surface-variant hover:text-primary transition-colors">Confidentialité</a>
+          <a href="data-deletion.html" class="text-primary font-semibold">Suppression des données</a>
+          <a href="mailto:privacy@regaly.app" class="text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 text-center text-xs text-on-surface-variant" style="border-top: 1px solid rgba(175,178,183,0.15)">
+        © 2025 Regaly — Benoit BERNARD. Tous droits réservés. · Conforme RGPD · Google Play · Apple App Store
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Checkbox visual toggle
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const indicator = cb.nextElementSibling.querySelector('span');
+        if (indicator) indicator.style.display = cb.checked ? 'block' : 'none';
+      });
+    });
+
+    // Form submission
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      document.getElementById('deletion-form').classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+      document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
